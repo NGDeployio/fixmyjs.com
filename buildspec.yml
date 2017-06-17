@@ -11,6 +11,5 @@ phases:
             - echo build finished
     post_build:
         commands:
-            - npm test
             - echo syncing with S3...
             - aws s3 sync ./ s3://ngdeployv2/development
